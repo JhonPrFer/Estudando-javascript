@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    font-weight: 700;
+    background-color: #fff;
+    color: #000;
+}
+
+body.darkmode{
+    background-color: #000;
+    color: #fff;
+}
+
+header div.darkmode{
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    width: 4rem;
+    height: 1.5rem;
+    border-radius: 500px;
+    border: 2px solid #888;
+    cursor: pointer;
+}
+
+header div.darkmode::before{
+    content: "";
+    position: absolute;
+    left: 11px;
+    top: 10%;
+    width: 1rem;
+    height: 1rem;
+    background: #888;
+    border-radius: 50%;
+    transform: translate(-50%);
+    transition: .3s;
+}
+
+header div.darkmode.active::before{
+    left: 80%;
+    right: 4px;
+}
